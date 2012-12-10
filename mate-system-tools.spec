@@ -1,11 +1,11 @@
 Summary:	MATE System Tools
 Name:		mate-system-tools 
-Version:	1.2.3
+Version:	1.4.0
 Release:	1
 License:	GPLv2+
 Group:		System/Configuration/Other
 URL:		http://mate-desktop.org
-Source0:	http://pub.mate-desktop.org/releases/1.2/%{name}-%{version}.tar.xz
+Source0:	http://pub.mate-desktop.org/releases/%{lua: print (string.match(rpm.expand("%{version}"),"%d+.%d+"))}/%{name}-%{version}.tar.xz
 
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	intltool
@@ -82,9 +82,14 @@ rm -rf %buildroot/var/lib/scrollkeeper
 %{_datadir}/glib-2.0/schemas/org.mate.system-tools.gschema.xml
 %{_datadir}/%{name}
 %{_iconsdir}/mate/*/*/*
-# mate help files
-%{_datadir}/mate/help
 
 %files devel
 %_libdir/pkgconfig/mate-system-tools.pc
+
+
+
+%changelog
+* Tue Jun 05 2012 Matthew Dawkins <mattydaw@mandriva.org> 1.2.3-1
++ Revision: 802687
+- imported package mate-system-tools
 
