@@ -1,26 +1,23 @@
+%define url_ver %(echo %{version}|cut -d. -f1,2)
+
 Summary:	MATE System Tools
 Name:		mate-system-tools 
-Version:	1.4.0
+Version:	1.8.0
 Release:	1
 License:	GPLv2+
 Group:		System/Configuration/Other
-URL:		http://mate-desktop.org
-Source0:	http://pub.mate-desktop.org/releases/%{lua: print (string.match(rpm.expand("%{version}"),"%d+.%d+"))}/%{name}-%{version}.tar.xz
-
-BuildRequires:	docbook-dtd412-xml
+Url:		http://mate-desktop.org
+Source0:	http://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
 BuildRequires:	intltool
+BuildRequires:	itstool
 BuildRequires:	mate-common
-BuildRequires:	rarian
-BuildRequires:	xsltproc
 BuildRequires:	libiw-devel
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(liboobs-1)
 BuildRequires:	pkgconfig(libcaja-extension)
-BuildRequires:	pkgconfig(mate-doc-utils)
 BuildRequires:	pkgconfig(pango)
 BuildRequires:	pkgconfig(polkit-gtk-mate-1)
 BuildRequires:	pkgconfig(system-tools-backends-2.0)
-
 Requires:	system-tools-backends2
 Requires:	usermode
 
@@ -50,13 +47,11 @@ This package contains the pkgconfig file for %{name}.
 %apply_patches
 
 %build
-NOCONFIGURE=yes ./autogen.sh
 %configure2_5x \
 	--disable-static \
-	--disable-scrollkeeper \
 	--enable-services
 
-%make LIBS='-lm'
+%make
 
 %install
 %makeinstall_std
@@ -85,11 +80,4 @@ rm -rf %buildroot/var/lib/scrollkeeper
 
 %files devel
 %_libdir/pkgconfig/mate-system-tools.pc
-
-
-
-%changelog
-* Tue Jun 05 2012 Matthew Dawkins <mattydaw@mandriva.org> 1.2.3-1
-+ Revision: 802687
-- imported package mate-system-tools
 
