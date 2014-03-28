@@ -9,7 +9,7 @@ Group:		System/Configuration/Other
 Url:		http://mate-desktop.org
 Source0:	http://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
 BuildRequires:	intltool
-BuildRequires:	itstool
+BuildRequires:	yelp-tools
 BuildRequires:	mate-common
 BuildRequires:	libiw-devel
 BuildRequires:	pkgconfig(gtk+-2.0)
