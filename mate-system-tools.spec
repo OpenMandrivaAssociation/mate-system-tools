@@ -8,6 +8,7 @@ License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		http://mate-desktop.org
 Source0:	http://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
+Patch0:		mate-system-tools-1.8.1-clang_buildfix.patch
 BuildRequires:	intltool
 BuildRequires:	yelp-tools
 BuildRequires:	mate-common

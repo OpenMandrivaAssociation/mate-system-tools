@@ -1,0 +1,22 @@
+--- mate-system-tools-1.8.1/src/network/network-locations.c~	2013-08-02 21:10:56.000000000 +0000
++++ mate-system-tools-1.8.1/src/network/network-locations.c	2014-10-10 18:09:29.376591940 +0000
+@@ -1129,7 +1129,7 @@
+   return result;
+ }
+ 
+-void
++gboolean
+ gst_network_locations_delete_location (GstNetworkLocations *locations,
+ 				       const gchar         *name)
+ {
+--- mate-system-tools-1.8.1/src/network/network-locations.h~	2013-08-02 21:10:56.000000000 +0000
++++ mate-system-tools-1.8.1/src/network/network-locations.h	2014-10-10 18:10:12.872593244 +0000
+@@ -62,7 +62,7 @@
+ 							      const gchar         *name);
+ gboolean               gst_network_locations_save_current    (GstNetworkLocations *locations,
+ 							      const gchar         *name);
+-void                   gst_network_locations_delete_location (GstNetworkLocations *locations,
++gboolean                   gst_network_locations_delete_location (GstNetworkLocations *locations,
+ 							      const gchar         *name);
+ 
+ G_END_DECLS
