@@ -2,7 +2,7 @@
 
 Summary:	MATE System Tools
 Name:		mate-system-tools 
-Version:	1.8.0
+Version:	1.8.1
 Release:	1
 License:	GPLv2+
 Group:		System/Configuration/Other
@@ -47,8 +47,7 @@ This package contains the pkgconfig file for %{name}.
 %apply_patches
 
 %build
-%configure2_5x \
-	--disable-static \
+%configure \
 	--enable-services
 
 %make
