@@ -3,7 +3,7 @@
 Summary:	MATE System Tools
 Name:		mate-system-tools 
 Version:	1.8.1
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		http://mate-desktop.org
