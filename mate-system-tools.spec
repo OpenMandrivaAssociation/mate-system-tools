@@ -45,7 +45,7 @@ This package contains the pkgconfig file for %{name}.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %configure \
