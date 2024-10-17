@@ -6,7 +6,7 @@ Version:	1.8.1
 Release:	2
 License:	GPLv2+
 Group:		System/Configuration/Other
-Url:		http://mate-desktop.org
+Url:		https://mate-desktop.org
 Source0:	http://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
 Patch0:		mate-system-tools-1.8.1-clang_buildfix.patch
 BuildRequires:	intltool
